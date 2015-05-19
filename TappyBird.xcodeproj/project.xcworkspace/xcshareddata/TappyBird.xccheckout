@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BD933956-22B7-487D-8917-7FFE819946D0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TappyBird</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A6F29DE7EF3125D4807A05107A18D81E4F7E4DB5</key>
+		<string>https://github.com/yungdai/TappyBird.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TappyBird.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A6F29DE7EF3125D4807A05107A18D81E4F7E4DB5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yungdai/TappyBird.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A6F29DE7EF3125D4807A05107A18D81E4F7E4DB5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A6F29DE7EF3125D4807A05107A18D81E4F7E4DB5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TappyBird</string>
+		</dict>
+	</array>
+</dict>
+</plist>
