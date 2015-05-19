@@ -8,13 +8,16 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     // declariations of differenet elements on the screen
     var bird = SKSpriteNode()
     var pipeDown = SKTexture()
     var pipeUp = SKTexture()
+    var pipes = SKNode()
+    var skyColor = SKColor()
+    var moving = SKNode()
     
     override func didMoveToView(view: SKView) {
         // setup the bird
@@ -34,6 +37,8 @@ class GameScene: SKScene {
         
         bird.runAction(makeBirdFlap)
         
+        // draw the bird onto the screen
+        self.addChild(bird)
         
         // bird physics......this will make the bird drop
         
@@ -41,7 +46,18 @@ class GameScene: SKScene {
 //        bird.physicsBody?.dynamic = true
 //        bird.physicsBody?.allowsRotation = false
 
+        // setup physics
+        self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
+        self.physicsWorld.contactDelegate = self
         
+        // setup background color
+        skyColor = SKColor(red: 81.0/255.0, green: 192.0/255.0, blue: 201.0/255.0, alpha: 1.0)
+        self.backgroundColor = skyColor
+        
+        moving = SKNode()
+        self.addChild(moving)
+        pipes = SKNode()
+        moving.addChild(pipes)
         
         
         
@@ -49,8 +65,7 @@ class GameScene: SKScene {
         pipeUp = SKTexture(imageNamed: "PipeUP")
         pipeDown = SKTexture(imageNamed: "PipeDown")
         
-        // draw the bird onto the screen
-        self.addChild(bird)
+
         
         
         
