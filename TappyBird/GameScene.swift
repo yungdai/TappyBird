@@ -10,6 +10,7 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    // This class is the main game scene
     
     // declariations of differenet elements on the screen
     var bird = SKSpriteNode()
@@ -19,17 +20,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var skyColor = SKColor()
     var moving = SKNode()
     
+    let mainGameScreenText = SKLabelNode(fontNamed: "System")
+    
+
+    
     override func didMoveToView(view: SKView) {
+        // setup physics
+        self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
+        self.physicsWorld.contactDelegate = self
+        
+        // setup background color
+        skyColor = SKColor(red: 81.0/255.0, green: 192.0/255.0, blue: 201.0/255.0, alpha: 1.0)
+        self.backgroundColor = skyColor
+        
+        // write some text to let yourself know that you've hit the main game screen
+        mainGameScreenText.text = "Main Game Screen!"
+        mainGameScreenText.fontSize = 30
+        mainGameScreenText.position = CGPoint (x: self.frame.size.width * 0.55, y: CGRectGetMidY(self.frame))
+        
+        // draw the main game screen text onto the screen
+        
+        self.addChild(mainGameScreenText)
+        
+
+        
         // setup the bird
         // bird texture for wing up and wing down
         var birdWingUp = SKTexture(imageNamed: "wingup")
-        birdWingUp.filteringMode = .Nearest
+        birdWingUp.filteringMode = .Linear
         var birdWingDown = SKTexture(imageNamed: "wingdown")
-        birdWingDown.filteringMode = .Nearest
+        birdWingDown.filteringMode = .Linear
         
         // place the bird onto the screen to the left side in the middle of the screen
         bird = SKSpriteNode(texture: birdWingUp)
-        bird.position = CGPoint(x: self.frame.size.width * 0.35, y: self.frame.size.height * 0.6)
+        bird.position = CGPoint(x: self.frame.size.width * 0.35, y: self.frame.size.height * 0.5)
         
         // animate the bird
         var animation = SKAction.animateWithTextures([birdWingUp, birdWingDown], timePerFrame: 0.2)
@@ -111,6 +135,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if self.nodeAtPoint(location) == self.bird {
                 print("Bird touched")
             }
+            
         }
     }
    
