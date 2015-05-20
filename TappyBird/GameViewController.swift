@@ -25,16 +25,12 @@ extension SKNode {
     }
 }
 
-class StartGameViewController: UIViewController {
+class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-<<<<<<< Updated upstream:TappyBird/GameViewController.swift
         if let scene = StartGameScene.unarchiveFromFile("StartGameScene") as? StartGameScene {
-=======
-        if let scene = StartGameScene.unarchiveFromFile("GameScene") as? StartGameScene {
->>>>>>> Stashed changes:TappyBird/StartGameViewController.swift
             // Configure the view.
             let skView = self.view as! SKView
             skView.showsFPS = true
