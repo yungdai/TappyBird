@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Yung Dai. All rights reserved.
 //
 
+<<<<<<< Updated upstream
 import Foundation
 import SpriteKit
 
@@ -151,3 +152,19 @@ class StartGameScene: SKScene, SKPhysicsContactDelegate  {
 
 
 
+=======
+import SpriteKit
+
+class StartGameScene: SKScene, SKPhysicsContactDelegate {
+
+    override func didMoveToView(view: SKView) {
+        
+        
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+    }
+    
+}
+>>>>>>> Stashed changes
